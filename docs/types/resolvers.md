@@ -5,7 +5,7 @@ title: Resolvers
 # Resolvers
 
 When defining a GraphQL schema, you usually start with the definition of the
-structure of the API, for example, let's take a look at this schema:
+schema for your API, for example, let's take a look at this schema:
 
 ```python+schema
 import strawberry
@@ -120,12 +120,12 @@ type Query {
 }
 ```
 
-## Accessing parent's data
+## Accessing field's parent's data
 
-It is quite common to want to be able to access the data from the parent in a
-resolver. For example let's say that we want to define a `fullName` field on our
-`User`. We can define a new field with a resolver that combines its first and
-last names:
+It is quite common to want to be able to access the data from the field's parent
+in a resolver. For example let's say that we want to define a `fullName` field
+on our `User`. We can define a new field with a resolver that combines its first
+and last names:
 
 ```python+schema
 import strawberry
