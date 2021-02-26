@@ -41,6 +41,7 @@ def test_simple_subscription(test_client):
 
         ws.send_json({"type": GQL_STOP, "id": "demo"})
         response = ws.receive_json()
+        print(response)
         assert response["type"] == GQL_COMPLETE
         assert response["id"] == "demo"
 
